@@ -13,7 +13,7 @@ export function Header({ onMenuClick }: HeaderProps) {
 
   return (
     <header className="bg-surface-container-lowest border-outline-variant sticky top-0 z-40 shrink-0 border-b shadow-sm">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4 font-sans text-sm antialiased">
+      <div className="mx-auto flex max-w-screen items-center justify-between px-6 py-4 font-sans text-sm antialiased">
         <div className="flex items-center gap-3">
           <button
             className="text-primary hover:bg-surface-container-low rounded-md p-1 transition-colors lg:hidden"

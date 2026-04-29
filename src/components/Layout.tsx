@@ -10,7 +10,7 @@ export function Layout() {
     <div className="bg-surface text-on-surface flex min-h-screen flex-col font-sans">
       <Header onMenuClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
 
-      <div className="relative mx-auto flex w-full max-w-[1200px] flex-1">
+      <div className="max-w-screnn relative mx-auto flex w-full flex-1">
         {/* Mobile Sidebar Overlay */}
         {isMobileMenuOpen && (
           <div

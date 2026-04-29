@@ -21,7 +21,7 @@ Para mandar bem neste projeto, foque nos seguintes pilares:
   - Como lidar com responsividade (`sm:`, `md:`, `lg:`).
   - Estados interativos (`hover:`, `focus:`, `disabled:`).
 - **Uso de Inteligência Artificial (IAs):**
-  O uso de IAs (como Copilot, Gemini, ChatGPT, GitHub Chat) **não é proibido** — pelo contrário, é **fortemente incentivado** como uma ferramenta de estudo e produtividade! 
+  O uso de IAs (como Copilot, Gemini, ChatGPT, GitHub Chat) **não é proibido** — pelo contrário, é **fortemente incentivado** como uma ferramenta de estudo e produtividade!
   A regra de ouro é: use a IA a seu favor, contanto que você **entenda a sintaxe da linguagem e compreenda exatamente o que o código gerado está fazendo**. Use-as como um "tutor particular" para explicar conceitos, gerar boilerplate ou sugerir melhorias, mas nunca para copiar e colar cegamente um código que você não sabe como funciona.
 
 ### Como estudar:
@@ -30,9 +30,9 @@ Para mandar bem neste projeto, foque nos seguintes pilares:
 - **Inspecione o código:** Leia os componentes já criados (como os na pasta `src/components`) para entender as convenções adotadas no projeto.
 - **Documentações oficiais:** A documentação do React (react.dev) e do Tailwind (tailwindcss.com) são excelentes. Consulte-as sempre.
 - **Estudando e Depurando com IA:**
-  - *Seja específico nos Prompts:* Quando encontrar um erro, não diga apenas "não funciona". Copie a mensagem de erro inteira do console, o trecho de código afetado e explique o comportamento esperado.
-  - *Peça o "Por quê":* Se o ChatGPT ou a IA do seu editor sugerir um código e ele resolver o problema, não pare por aí. Pergunte: *"Me explique passo a passo por que essa alteração resolveu o bug"*.
-  - *Use o Contexto a seu favor:* Em agentes integrados ao VSCode (como Copilot Chat, Gemini, etc), use ferramentas de contexto (como mencionar arquivos específicos ou usar `@workspace`) para que a IA analise como seu componente conversa com o resto do sistema.
+  - _Seja específico nos Prompts:_ Quando encontrar um erro, não diga apenas "não funciona". Copie a mensagem de erro inteira do console, o trecho de código afetado e explique o comportamento esperado.
+  - _Peça o "Por quê":_ Se o ChatGPT ou a IA do seu editor sugerir um código e ele resolver o problema, não pare por aí. Pergunte: _"Me explique passo a passo por que essa alteração resolveu o bug"_.
+  - _Use o Contexto a seu favor:_ Em agentes integrados ao VSCode (como Copilot Chat, Gemini, etc), use ferramentas de contexto (como mencionar arquivos específicos ou usar `@workspace`) para que a IA analise como seu componente conversa com o resto do sistema.
 
 ---
 
@@ -136,11 +136,13 @@ Utilizamos o padrão **Conventional Commits** para que o histórico do Git fique
 O DevTools (acessível com **F12** no Chrome/Edge ou **Ctrl+Shift+I**) é a sua janela para dentro do navegador. Aprenda a usá-lo e você vai resolver bugs 10x mais rápido.
 
 ### Aba Console
+
 - É o ponto de partida. Qualquer `console.log()`, `console.error()` ou erro não tratado aparece aqui.
 - Antes de perguntar para alguém "por que não funciona?", olhe o console primeiro.
 - Filtre as mensagens: use os botões **Errors**, **Warnings** e **Info** para não se perder em um mar de mensagens.
 
 ### Aba Network (Rede)
+
 - **Essencial para depurar chamadas de API.** Toda requisição que o seu código faz (`fetch`, `axios`) aparece aqui.
 - Clique em uma requisição e analise:
   - **Headers:** Veja a URL exata que foi chamada, o método (GET, POST...) e os cabeçalhos enviados.
@@ -149,12 +151,15 @@ O DevTools (acessível com **F12** no Chrome/Edge ou **Ctrl+Shift+I**) é a sua 
 - **Dica prática:** Se o `getStudents()` não está retornando dados, vá na aba Network, filtre por `students` e veja exatamente o que aconteceu na requisição.
 
 ### Aba Elements (Elementos)
+
 - Inspecione o HTML e CSS renderizado em tempo real.
 - Passe o mouse sobre um elemento, clique com o botão direito e escolha **"Inspecionar"**. O DevTools vai saltar direto para aquele nó no DOM.
 - No painel da direita, em **Styles**, você pode **adicionar, editar ou desabilitar classes CSS ao vivo** sem precisar salvar o arquivo — ótimo para testar estilos Tailwind rapidamente.
 
 ### React Developer Tools (Extensão)
+
 Instale a extensão **[React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)** no seu navegador:
+
 - **Aba Components:** Mostra a árvore de componentes React. Você consegue clicar em qualquer componente e ver suas **props** e **state** em tempo real — sem precisar de `console.log`.
 - **Aba Profiler:** Permite gravar uma sessão e ver quais componentes re-renderizaram e por quê. Útil para encontrar gargalos de performance.
 

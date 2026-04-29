@@ -17,7 +17,7 @@ export function Sidebar({ className }: { className?: string }) {
   return (
     <aside
       className={cn(
-        'border-outline-variant bg-surface sticky top-[72px] flex h-[calc(100vh-72px)] w-64 flex-col border-r px-4 py-6',
+        'border-outline-variant sticky top-[72px] flex h-full w-64 flex-col border-r bg-white px-4 py-6',
         className,
       )}
     >
@@ -46,15 +46,40 @@ export function Sidebar({ className }: { className?: string }) {
         })}
       </nav>
 
-      <div className="bg-surface-container-high border-outline-variant mt-auto rounded-2xl border p-4">
-        <p className="text-body-sm text-on-surface font-semibold">
-          Upgrade Plan
-        </p>
-        <p className="text-on-surface-variant mt-1 text-xs">
-          Get more storage and advanced analytics.
-        </p>
-        <button className="bg-primary text-on-primary mt-3 w-full rounded-lg py-2 text-xs font-bold transition-opacity hover:opacity-90">
-          Upgrade
+      {/* User footer */}
+      <div className="border-outline-variant mt-auto flex items-center gap-3 border-t pt-4">
+        <img
+          src="https://api.dicebear.com/7.x/avataaars/svg?seed=Admin"
+          alt="Avatar do usuário"
+          className="h-10 w-10 rounded-full object-cover"
+        />
+        <div className="min-w-0 flex-1">
+          <p className="text-on-surface truncate text-sm font-semibold">
+            usuário
+          </p>
+          <p className="text-on-surface-variant truncate text-xs">
+            usuario@school.com
+          </p>
+        </div>
+        <button
+          title="Sair"
+          className="text-on-surface-variant hover:text-error shrink-0 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+            <polyline points="16 17 21 12 16 7" />
+            <line x1="21" y1="12" x2="9" y2="12" />
+          </svg>
         </button>
       </div>
     </aside>
