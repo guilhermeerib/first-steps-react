@@ -1,10 +1,7 @@
-import { Layout } from '../components/Layout'
-
 export function Dashboard() {
   return (
-    <Layout>
+    <div>
       {/* O conteúdo do Dashboard será construído aqui */}
-      <div></div>
-    </Layout>
+    </div>
   )
 }
