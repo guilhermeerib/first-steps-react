@@ -1,0 +1,40 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Ana Silva",
+      "email": "ana.silva@email.com",
+      "registration": "2024001",
+      "status": "Ativo",
+      "grade": "10º Ano",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ana"
+    },
+    {
+      "id": "2",
+      "name": "Bruno Oliveira",
+      "email": "bruno.o@email.com",
+      "registration": "2024002",
+      "status": "Inativo",
+      "grade": "9º Ano",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Bruno"
+    },
+    {
+      "id": "3",
+      "name": "Carla Santos",
+      "email": "carla.santos@email.com",
+      "registration": "2024003",
+      "status": "Ativo",
+      "grade": "1º Ano EM",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Carla"
+    },
+    {
+      "id": "4",
+      "name": "Diego Souza",
+      "email": "diego.souza@email.com",
+      "registration": "2024004",
+      "status": "Ativo",
+      "grade": "2º Ano EM",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Diego"
+    }
+  ]
+}
