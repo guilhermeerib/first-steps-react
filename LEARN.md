@@ -131,7 +131,36 @@ Utilizamos o padrão **Conventional Commits** para que o histórico do Git fique
 
 ---
 
-## 🎨 5. Inspiração e Ecossistema
+## 🔍 5. Depurando com o DevTools do Navegador
+
+O DevTools (acessível com **F12** no Chrome/Edge ou **Ctrl+Shift+I**) é a sua janela para dentro do navegador. Aprenda a usá-lo e você vai resolver bugs 10x mais rápido.
+
+### Aba Console
+- É o ponto de partida. Qualquer `console.log()`, `console.error()` ou erro não tratado aparece aqui.
+- Antes de perguntar para alguém "por que não funciona?", olhe o console primeiro.
+- Filtre as mensagens: use os botões **Errors**, **Warnings** e **Info** para não se perder em um mar de mensagens.
+
+### Aba Network (Rede)
+- **Essencial para depurar chamadas de API.** Toda requisição que o seu código faz (`fetch`, `axios`) aparece aqui.
+- Clique em uma requisição e analise:
+  - **Headers:** Veja a URL exata que foi chamada, o método (GET, POST...) e os cabeçalhos enviados.
+  - **Payload (Corpo):** O que você enviou no `body` de um POST/PATCH.
+  - **Response (Resposta):** O JSON que a API retornou — ou a mensagem de erro se der 4xx/5xx.
+- **Dica prática:** Se o `getStudents()` não está retornando dados, vá na aba Network, filtre por `students` e veja exatamente o que aconteceu na requisição.
+
+### Aba Elements (Elementos)
+- Inspecione o HTML e CSS renderizado em tempo real.
+- Passe o mouse sobre um elemento, clique com o botão direito e escolha **"Inspecionar"**. O DevTools vai saltar direto para aquele nó no DOM.
+- No painel da direita, em **Styles**, você pode **adicionar, editar ou desabilitar classes CSS ao vivo** sem precisar salvar o arquivo — ótimo para testar estilos Tailwind rapidamente.
+
+### React Developer Tools (Extensão)
+Instale a extensão **[React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)** no seu navegador:
+- **Aba Components:** Mostra a árvore de componentes React. Você consegue clicar em qualquer componente e ver suas **props** e **state** em tempo real — sem precisar de `console.log`.
+- **Aba Profiler:** Permite gravar uma sessão e ver quais componentes re-renderizaram e por quê. Útil para encontrar gargalos de performance.
+
+---
+
+## 🎨 6. Inspiração e Ecossistema
 
 Quer criar novos componentes bonitos e acessíveis? Consulte estas referências:
 
