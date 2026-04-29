@@ -41,14 +41,15 @@ A API simula um backend real para persistência de dados. Você pode interagir c
   - `GET /students`: Lista todos os alunos.
   - `GET /stats`: Retorna estatísticas do dashboard (total, ativos, novos).
 - **Exemplo de uso:**
+
   ```tsx
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL
 
   // Listar alunos
-  const students = await fetch(`${apiUrl}/students`).then(res => res.json());
+  const students = await fetch(`${apiUrl}/students`).then((res) => res.json())
 
   // Buscar estatísticas
-  const stats = await fetch(`${apiUrl}/stats`).then(res => res.json());
+  const stats = await fetch(`${apiUrl}/stats`).then((res) => res.json())
   ```
 
 Os dados ficam salvos no arquivo `db.json` na raiz do projeto. Qualquer alteração feita via POST, PUT ou DELETE será persistida nesse arquivo.
@@ -116,6 +117,10 @@ Para se dar bem nos desafios, foque em entender os seguintes conceitos do Tailwi
 - **Responsividade:** Aprenda a usar prefixos como `md:` ou `lg:` para mudar o layout em telas maiores. (Exemplo: `grid-cols-1 md:grid-cols-3` - começa com 1 coluna no mobile e passa a ter 3 colunas em telas médias).
 
 📚 **Documentação Recomendada:** [Tailwind CSS - Core Concepts](https://tailwindcss.com/docs/utility-first)
+
+## 📖 Guia de Estudos e Dicas (LEARN.md)
+
+Para acelerar seu aprendizado, criamos o arquivo **[LEARN.md](./LEARN.md)**. Lá você encontrará dicas valiosas sobre o que estudar no React e Tailwind, como customizar e estender componentes (com um exemplo prático do nosso botão), padrões de commit, dicas de Git e como utilizar Inteligência Artificial a seu favor para estudar e depurar bugs! Não deixe de conferir!
 
 ## 🎯 Boas Práticas e Recomendações
 
