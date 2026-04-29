@@ -1,10 +1,10 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { Dashboard } from './pages/Dashboard';
-import { CadastroAluno } from './pages/CadastroAluno';
-import { EditarAluno } from './pages/EditarAluno';
-import { PerfilAluno } from './pages/PerfilAluno';
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { Home } from './pages/Home'
+import { Dashboard } from './pages/Dashboard'
+import { CadastroAluno } from './pages/CadastroAluno'
+import { EditarAluno } from './pages/EditarAluno'
+import { PerfilAluno } from './pages/PerfilAluno'
 
 export function AppRoutes() {
   return (
@@ -18,5 +18,5 @@ export function AppRoutes() {
         <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
-  );
+  )
 }

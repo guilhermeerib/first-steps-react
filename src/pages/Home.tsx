@@ -8,15 +8,13 @@ export function Home() {
           Bem-vindo ao Desafio!
         </h1>
         <p className="text-on-surface-variant text-lg">
-          Este é o contêiner principal. Aqui é onde você construirá as telas
-          do sistema utilizando os componentes base e o Tailwind CSS.
+          Este é o contêiner principal. Aqui é onde você construirá as telas do
+          sistema utilizando os componentes base e o Tailwind CSS.
         </p>
       </div>
 
-      <div className="border-outline-variant space-y-4 rounded-lg border bg-surface-container-lowest p-6 shadow-sm">
-        <h2 className="mb-4 text-xl font-semibold">
-          Exemplos de Componentes
-        </h2>
+      <div className="border-outline-variant bg-surface-container-lowest space-y-4 rounded-lg border p-6 shadow-sm">
+        <h2 className="mb-4 text-xl font-semibold">Exemplos de Componentes</h2>
 
         <div className="flex flex-wrap gap-4">
           <Button variant="primary">Botão Primário</Button>

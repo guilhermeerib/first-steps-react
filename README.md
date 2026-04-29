@@ -39,12 +39,13 @@ A API simula um backend real para persistência de dados. Você pode interagir c
 - **Base URL:** Definida no seu `.env` como `VITE_API_URL`.
 - **Endpoint:** `/students`
 - **Exemplo de uso:**
+
   ```tsx
-  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiUrl = import.meta.env.VITE_API_URL
 
   // Listar alunos
-  const response = await fetch(`${apiUrl}/students`);
-  const data = await response.json();
+  const response = await fetch(`${apiUrl}/students`)
+  const data = await response.json()
   ```
 
 Os dados ficam salvos no arquivo `db.json` na raiz do projeto. Qualquer alteração feita via POST, PUT ou DELETE será persistida nesse arquivo.

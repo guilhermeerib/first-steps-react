@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
-import { Sidebar } from './Sidebar';
-import { Header } from './Header';
-import { Outlet } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Sidebar } from './Sidebar'
+import { Header } from './Header'
+import { Outlet } from 'react-router-dom'
 
 export function Layout() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-surface font-sans text-on-surface flex flex-col">
+    <div className="bg-surface text-on-surface flex min-h-screen flex-col font-sans">
       <Header onMenuClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} />
-      
-      <div className="max-w-[1200px] w-full mx-auto flex flex-1 relative">
+
+      <div className="relative mx-auto flex w-full max-w-[1200px] flex-1">
         {/* Mobile Sidebar Overlay */}
         {isMobileMenuOpen && (
-          <div 
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden mt-[72px]"
+          <div
+            className="fixed inset-0 z-40 mt-[72px] bg-black/50 lg:hidden"
             onClick={() => setIsMobileMenuOpen(false)}
           />
         )}
 
         {/* Sidebar */}
-        <div className={`
-          fixed lg:static inset-y-0 left-0 z-50 transform transition-transform duration-300 ease-in-out
-          ${isMobileMenuOpen ? 'translate-x-0 mt-[72px]' : '-translate-x-full lg:translate-x-0'}
-        `}>
+        <div
+          className={`fixed inset-y-0 left-0 z-50 transform transition-transform duration-300 ease-in-out lg:static ${isMobileMenuOpen ? 'mt-[72px] translate-x-0' : '-translate-x-full lg:translate-x-0'} `}
+        >
           <Sidebar />
         </div>
 
         {/* Main Content */}
-        <main className="flex-1 p-6 md:p-8 w-full min-w-0">
+        <main className="w-full min-w-0 flex-1 p-6 md:p-8">
           <Outlet />
         </main>
       </div>
     </div>
-  );
+  )
 }

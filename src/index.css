@@ -1,15 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
 
 @theme {
   --font-sans: 'Lexend', sans-serif;
-  
+
   /* Colors */
-  --color-primary: #2563EB;
-  --color-secondary: #7DD3FC;
-  --color-tertiary: #F0F9FF;
+  --color-primary: #2563eb;
+  --color-secondary: #7dd3fc;
+  --color-tertiary: #f0f9ff;
   --color-surface: #f9f9ff;
-  --color-neutral: #1E293B;
+  --color-neutral: #1e293b;
 
   --color-surface-dim: #cfdaf2;
   --color-surface-bright: #f9f9ff;
@@ -39,7 +39,7 @@
   --color-on-error: #ffffff;
   --color-error-container: #ffdad6;
   --color-on-error-container: #93000a;
-  
+
   --color-primary-fixed: #dbe1ff;
   --color-primary-fixed-dim: #b4c5ff;
   --color-on-primary-fixed: #00174b;
