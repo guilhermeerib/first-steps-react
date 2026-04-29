@@ -36,5 +36,10 @@
       "grade": "2º Ano EM",
       "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Diego"
     }
-  ]
+  ],
+  "stats": {
+    "totalStudents": 1284,
+    "activeStudents": 1120,
+    "newRegistrations": 42
+  }
 }

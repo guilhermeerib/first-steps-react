@@ -33,10 +33,10 @@ export function Sidebar({ className }: { className?: string }) {
               key={index}
               to={item.path}
               className={cn(
-                'flex items-center gap-3 rounded-xl px-4 py-3 font-semibold transition-colors duration-150',
+                'flex items-center gap-3 rounded-sm px-4 py-3 font-semibold transition-colors duration-150',
                 active
-                  ? 'bg-tertiary-container text-primary'
-                  : 'text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface',
+                  ? 'text-primary bg-surface-container'
+                  : 'text-on-surface hover:bg-surface-container-low hover:text-on-surface',
               )}
             >
               <item.icon size={20} />

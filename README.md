@@ -37,15 +37,18 @@ Para começar, siga estas etapas na sua máquina local:
 A API simula um backend real para persistência de dados. Você pode interagir com ela usando `fetch` ou bibliotecas como `axios`.
 
 - **Base URL:** Definida no seu `.env` como `VITE_API_URL`.
-- **Endpoint:** `/students`
+- **Endpoints:**
+  - `GET /students`: Lista todos os alunos.
+  - `GET /stats`: Retorna estatísticas do dashboard (total, ativos, novos).
 - **Exemplo de uso:**
-
   ```tsx
-  const apiUrl = import.meta.env.VITE_API_URL
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   // Listar alunos
-  const response = await fetch(`${apiUrl}/students`)
-  const data = await response.json()
+  const students = await fetch(`${apiUrl}/students`).then(res => res.json());
+
+  // Buscar estatísticas
+  const stats = await fetch(`${apiUrl}/stats`).then(res => res.json());
   ```
 
 Os dados ficam salvos no arquivo `db.json` na raiz do projeto. Qualquer alteração feita via POST, PUT ou DELETE será persistida nesse arquivo.
